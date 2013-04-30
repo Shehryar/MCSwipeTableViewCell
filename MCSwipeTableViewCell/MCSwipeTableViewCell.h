@@ -38,6 +38,10 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellMode){
 
 @property(nonatomic, assign) id <MCSwipeTableViewCellDelegate> delegate;
 
+// Adding a property for a UITextField
+
+@property (nonatomic, strong) UITextField *itemLabel;
+
 @property(nonatomic, copy) NSString *firstIconName;
 @property(nonatomic, copy) NSString *secondIconName;
 @property(nonatomic, copy) NSString *thirdIconName;

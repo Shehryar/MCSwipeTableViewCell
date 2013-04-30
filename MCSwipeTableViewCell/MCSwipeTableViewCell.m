@@ -128,6 +128,15 @@ secondStateIconName:(NSString *)secondIconName
 - (void)initializer {
     _mode = MCSwipeTableViewCellModeSwitch;
 
+    // Customize the UITextField here and position it
+    _itemLabel = [[UITextField alloc] initWithFrame:CGRectMake(10, 0, 270.0, self.bounds.size.height)];
+    _itemLabel.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    _itemLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
+    
+    _itemLabel.returnKeyType = UIReturnKeyDone;
+    _itemLabel.placeholder = @"Type some stuff here!";
+    [self.contentView addSubview:_itemLabel];
+
     _colorIndicatorView = [[UIView alloc] initWithFrame:self.bounds];
     [_colorIndicatorView setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [_colorIndicatorView setBackgroundColor:[UIColor clearColor]];
